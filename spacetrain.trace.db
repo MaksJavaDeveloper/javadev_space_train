@@ -1,0 +1,32 @@
+2023-06-22 14:32:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "passport" не найден
+Column "passport" not found [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
+	at passenger.PassengerDaoService.getByPassport(PassengerDaoService.java:35)
+	at cli.AddTicketState.init(AddTicketState.java:43)
+	at cli.CliFSM.setState(CliFSM.java:65)
+	at cli.IdleState.newTicketRequested(IdleState.java:16)
+	at cli.CliFSM.newTicketRequested(CliFSM.java:45)
+	at cli.CliFSM.<init>(CliFSM.java:33)
+	at App.main(App.java:18)
+2023-06-22 14:47:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "passport" не найден
+Column "passport" not found [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
+	at passenger.PassengerDaoService.getByPassport(PassengerDaoService.java:35)
+	at cli.AddTicketState.init(AddTicketState.java:43)
+	at cli.CliFSM.setState(CliFSM.java:65)
+	at cli.IdleState.newTicketRequested(IdleState.java:16)
+	at cli.CliFSM.newTicketRequested(CliFSM.java:45)
+	at cli.CliFSM.<init>(CliFSM.java:33)
+	at App.main(App.java:18)
