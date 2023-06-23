@@ -13,17 +13,11 @@ public class CliState {
     public void newTicketRequested() {
 
     }
-    public void ticketOrdered() {
-
-    }
 
     public void planetStatsRequested() {
 
     }
 
-    public void planetStatsPrinted() {
-
-    }
 
     public void unknownCommand(String cmd) {
 

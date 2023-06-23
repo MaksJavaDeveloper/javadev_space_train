@@ -1,14 +1,15 @@
 package cli;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import storage.ConnectionProvider;
 
 import java.util.Scanner;
 
+@Data
 public class CliFSM {
 
-    @Setter
     private CliState state;
 
     @Getter
@@ -22,6 +23,10 @@ public class CliFSM {
         state = new IdleState(this);
 
         scanner = new Scanner(System.in);
+        startInputLoop();
+    }
+
+    private void startInputLoop() {
         while (true) {
             String command = scanner.nextLine();
 
@@ -41,19 +46,13 @@ public class CliFSM {
             }
         }
     }
+
     public void newTicketRequested() {
         state.newTicketRequested();
-    }
-    public void ticketOrdered() {
-        state.ticketOrdered();
     }
 
     public void planetStatsRequested() {
         state.planetStatsRequested();
-    }
-
-    public void planetStatsPrinted() {
-        state.planetStatsPrinted();
     }
 
     public void unknownCommand(String cmd) {

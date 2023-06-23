@@ -13,7 +13,7 @@ public class PassengerDaoService {
     public PassengerDaoService(Connection connection) throws SQLException {
 
         createSt = connection.prepareStatement("INSERT INTO passenger (passport, name) VALUES (?, ?)");
-        getByPassportSt = connection.prepareStatement("SELECT id, name FROM passenger WHERE passport = ?");
+        getByPassportSt = connection.prepareStatement("SELECT id, passport, name FROM passenger WHERE passport = ?");
     }
 
     public void create(Passenger passenger) throws SQLException {

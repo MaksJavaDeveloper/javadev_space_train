@@ -25,7 +25,7 @@ public class TicketDaoService {
         getMaxIdSt = connection.prepareStatement("SELECT max(id) AS maxId FROM ticket");
 
         getTicketCountToPlanetSt = connection.prepareStatement(
-                "SELECT count(*) AS cnt FROM ticket WHERE to_planet = ?"
+                "SELECT count(*) AS maxId FROM ticket WHERE to_planet = ?"
         );
 
     }
